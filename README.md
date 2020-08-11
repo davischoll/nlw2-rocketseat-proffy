@@ -2,7 +2,7 @@
 
 Projeto desenvolvido durante a NLW 2 da [Rocketseat](https://rocketseat.com.br/), agosto/2020.
 
-![Preview]()
+![Preview](https://github.com/davischoll/nlw2-rocketseat-proffy/blob/master/public/images/proffy_index.png)
 
 
 ## Projeto
@@ -14,7 +14,7 @@ A ideia da aplicação é funcionar como uma plataforma que conecta estudantes a
 Para rodar a aplicação na máquina com um servidor local, é necessário o NodeJS e NPM.
 
 ```
-npm run dev
+$ npm run dev
 
 - Acessar localhost pela porta 5500 no navegador.
 ```
