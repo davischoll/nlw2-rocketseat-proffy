@@ -3,7 +3,7 @@ const server = express()
 const nunjucks = require('nunjucks')
 const path = require('path')
 
-const { pageLanding, pageStudy, pageGiveClasses, saveClasses } = require('./pages')
+const { pageLanding, pageStudy, pageGiveClasses, saveClasses } = require('src/pages.js')
 
 nunjucks.configure('src/views', {
   express: server,
