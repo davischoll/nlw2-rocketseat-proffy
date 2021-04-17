@@ -1,9 +1,10 @@
 const express = require('express')
 const server = express()
+const nunjucks = require('nunjucks')
+const path = require('path')
 
 const { pageLanding, pageStudy, pageGiveClasses, saveClasses } = require('./pages')
 
-const nunjucks = require('nunjucks')
 nunjucks.configure('src/views', {
   express: server,
   noCache: true
@@ -11,7 +12,9 @@ nunjucks.configure('src/views', {
 
 server
 .use(express.urlencoded({ extended: true }))
-.use(express.static("public"))
+.set('view engine', 'nunjucks')
+.set('views', path.join(__dirname, 'src/views'))
+.use(express.static(path.join(__dirname, 'public')))
 .get("/", pageLanding)
 .get("/study", pageStudy)
 .get("/give-classes", pageGiveClasses)
